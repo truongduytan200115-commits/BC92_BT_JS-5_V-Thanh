@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bài 1 -->
+    <h2>Quản Lý Tuyển Sinh</h2>
+    <label>Điểm chuẩn hội đồng:</label>
+    <input type="number" id="diemChuan" step="0.1" placeholder="Nhập điểm chuẩn">
+    <br>
+    <label>Điểm môn thứ 1:</label>
+    <input type="number" id="mon1" step="0.1">
+    <br>
+    <label>Điểm môn thứ 2:</label>
+    <input type="number" id="mon2" step="0.1">
+    <br>
+    <label>Điểm môn thứ 3:</label>
+    <input type="number" id="mon3" step="0.1">
+    <br>
+    <label>Khu vực:</label>
+    <select id="khuVuc">
+        <option value="X">Không thuộc khu vực ưu tiên (X)</option>
+        <option value="A">Khu vực A</option>
+        <option value="B">Khu vực B</option>
+        <option value="C">Khu vực C</option>
+    </select>
+
+    <label>Đối tượng:</label>
+    <select id="doiTuong">
+        <option value="0">Không thuộc đối tượng ưu tiên (0)</option>
+        <option value="1">Đối tượng 1</option>
+        <option value="2">Đối tượng 2</option>
+        <option value="3">Đối tượng 3</option>
+    </select>
+
+    <button onclick="ketQuaTuyenSinh()">Xem Kết Quả</button>
+
+    <div id="result"></div>
+
+    <br><hr><hr>
+
+    <!-- bài 2 -->
+    <h2>BÀI TẬP NỘP: TÍNH TIỀN ĐIỆN</h2>
+    
+    <div class="form-group">
+        <label>Họ tên:</label>
+        <input type="text" id="hoTen" placeholder="Nhập tên người dùng">
+    </div>
+    
+    <div class="form-group">
+        <label>Số Kw tiêu thụ:</label>
+        <input type="number" id="soKw" placeholder="Nhập số Kw">
+    </div>
+
+    <button onclick="xuLyTinhTien()">Tính Tiền Điện</button>
+
+    <div id="result1"></div>
+
+    <br><hr><hr>
+
+    <!-- bài 3 -->
+    <h2>Tính Thuế Thu Nhập Cá Nhân</h2>
+    <input type="text" id="fullName" placeholder="Nhập họ tên">
+    <input type="number" id="totalIncome" placeholder="Tổng thu nhập năm (Ví dụ: 200)">
+    <input type="number" id="dependents" placeholder="Số người phụ thuộc">
+    <button onclick="calculateTax()">Tính tiền thuế</button>
+
+    <div id="result3"></div>
+
+    <br><hr><hr>
+
+    <!-- bài 4 -->
+    <h2>Tính Hóa Đơn Tiền Cáp</h2>
+    
+    <select id="customerType" onchange="toggleConnections()">
+        <option value="">Chọn loại khách hàng</option>
+        <option value="residential">Nhà dân</option>
+        <option value="business">Doanh nghiệp</option>
+    </select>
+    
+    <input type="text" id="customerId" placeholder="Mã khách hàng">
+    <input type="number" id="premiumChannels" placeholder="Số kênh cao cấp">
+    
+    <input type="number" id="connections" placeholder="Số kết nối" disabled style="display: none;">
+    
+    <button onclick="calculateCableBill()">Tính tiền cáp</button>
+    
+    <div id="result4"></div>
+
+    <br><hr><hr>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

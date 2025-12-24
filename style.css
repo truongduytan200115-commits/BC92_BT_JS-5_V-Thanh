@@ -1,0 +1,99 @@
+/* Tổng thể trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* Container cho từng bài tập - Biến mỗi bài thành 1 khối trắng (Card) */
+h2 {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+/* Tạo khung bao quanh mỗi bài tập */
+body > div:not(#result, #result1, #result3, #result4), 
+body > label, body > input, body > select, body > button {
+
+}
+
+
+input[type="number"], 
+input[type="text"], 
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tràn chiều rộng */
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 5px rgba(26, 115, 232, 0.2);
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1557b0;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Khu vực hiển thị kết quả */
+#result, #result1, #result3, #result4 {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e8f0fe;
+    color: #1967d2;
+    font-weight: 500;
+    min-height: 20px;
+    border-left: 5px solid #1a73e8;
+    display: none; /* Sẽ được JS hiển thị khi có kết quả */
+}
+
+/* Đường kẻ ngăn cách */
+hr {
+    width: 100%;
+    max-width: 500px;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
